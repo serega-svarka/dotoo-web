@@ -11,6 +11,7 @@
 
 <body>
 
+
     <div id="page-wrapper">
         <header id="header">
             <div class="container">
@@ -22,17 +23,18 @@
                         <li><a href="#">Patches</a></li>
                     </ul>
                 </div>
+
                 <div id="secondary-menu">
                     <ul>
-                        <li><a href="https://www.dotabuff.com/players">Players</a></li>
+                        <li><span onclick="openNav()">Start</span></li>
                         <li><a href="#">Matches</a></li>
                         <li><a href="#">Guides</a></li>
                         <li id="logo"><img src="images/dota2_logoo.png" width="100" height="80" alt=""></li>
                         <li><a href="#">Forum</a></li>
-                        <li><a href="#">WordCloud</a></li>
-                        <li><a href="#">Plus</a></li>
+                        <li><a href="#" class="open-popup">Players</a></li>
                     </ul>
                 </div>
+
             </div>
         </header>
 
@@ -50,7 +52,7 @@
                 </div>
             </div>
             <main>
-                <div class="carousel slide" id="carouselControls" data-ride="carousel">
+                <!--<div class="carousel slide" id="carouselControls" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img class="d-block w-100" src="#" alt="">
@@ -62,7 +64,7 @@
                             <img class="d-block w-100" src="#" alt="">
                         </div>
                     </div>
-                </div>
+                </div>-->
             </main>
             <div id="content">
                 <p>In the beginning there was nothing. Then, out of a roiling primordial soup of terribly unbalanced custom games arose Defense of the Ancients. In those early days, players roamed randomly around the map fighting whatever crossed their path. Individual strength and aggression lifted some to victory while others played a more strategic positional brand of warfare.</p>
@@ -74,16 +76,43 @@
                 <p>After an extended break the DPC is finally firing on all cylinders once again. Week four had a couple of really unexpected results and is showcasing how unpredictable the Chinese region can be this time around.</p>
 
                 <p>The third week of this DPC season is over, mostly going as predicted. There were a couple of surprises along the way and some glimmer of hope for unexpectedly underperforming teams, so that’s what we are going to concentrate on today.</p>
+
+                <div id="myNav" class="overlay">
+
+
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+
+                    <div class="overlay-content">
+                        <a href="#">Get started</a>
+                        <a href="#">Dota client</a>
+                        <a href="#">New info</a>
+                        <a href="#">Contact</a>
+                    </div>
+
+                </div>
+
+
             </div>
 
             <!-- /sidebar -->
             <div id="sidebar">
                 <div class="wrapper">
-                    <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc1.png" alt="image1" /></a>
-                    <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc2.png" alt="image2" /></a>
-                    <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc3.png" alt="image3" /></a>
-                    <div id="shadow" class="shadow"></div>
-                </div><!-- /wrapper -->
+                    <button id="myBtn">DPS tournament</button>
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <p>
+                                <span class="close">&times;</span>
+                                <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc1.png" width="250" alt="image1"></a>
+                                <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc2.png" width="250" alt="image2" /></a>
+                                <a href="https://www.dotabuff.com/blog/2021-12-21-dpc-week-three-how-the-mighty-have-fallen" target="_blank"><img src="images/dpc3.png" width="250" alt="image3" /></a>
+                                <div id="shadow" class="shadow"></div>
+                                <h2>DPS Live results</h2>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- /wrapper -->
             </div>
             <div class="clear"></div>
         </div>
@@ -105,11 +134,76 @@
                         <li><a href="http://www.trackdota.com/">TrackDota</a></li>
                     </ul>
                 </div>
-                all links are copied from www.Dotabuff.com
             </footer>
+        </div>
+        <div>
+            all links are copied from www.Dotabuff.com
         </div>
 
     </div>
+    <!-- <div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Support</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Translate</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Overbuff</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fortbuff</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Valorbuff</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">TrackDota</a></li>
+        </ul>
+      </div>
+
+      <div class="col-2">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQ</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Support</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Privacy</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help</a></li>
+        </ul>
+      </div>
+
+      <div class="col-4 offset-1">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of whats new and exciting from us.</p>
+          <div class="d-flex w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden">Email address</label>
+            <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between py-4 my-4 border-top">
+      <p>&copy; 2021 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="assets/jquery/jquery-1.12.0.min.js" defer></script>
     <script src="js/main.js" defer></script>
